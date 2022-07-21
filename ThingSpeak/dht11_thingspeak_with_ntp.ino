@@ -1,15 +1,15 @@
 #include <ThingSpeak.h>
 #include <DHT.h>
 #include <String.h>
-#include <NTPClient.h>
+#include <NTP.h>
 
 // For connecting to WiFi
 #include <WiFi.h>
-#include "esp_wpa2.h" // WPA2 library for connections to Enterprise networks
-#include <C:\Users\User\Documents\Arduino\libraries\mywifidetails\mywifidetails.h> // Replace with your own .h file with WiFi details
-#define EAP_IDENTITY eap_id
-#define EAP_PASSWORD eap_pass
-int modeWiFi; // To select between connecting WPA2 and WPA2 Enterprise
+#include "esp_wpa2.h" //wpa2 library for connections to Enterprise networks
+#include <C:\Users\Matthew\Documents\Arduino\libraries\mywifidetails\mywifidetails.h>
+#define EAP_IDENTITY eap_id //if connecting from another corporation, use identity@organisation.domain in Eduroam 
+#define EAP_PASSWORD eap_pass //your Eduroam password
+int modeWiFi;
 
 // ThingSpeak variables
 char thingSpeakAddress[] = "api.thingspeak.com";
@@ -25,56 +25,61 @@ DHT dht(DHTPin, DHTType);
 
 // NTP setup
 WiFiUDP ntpUDP;
-NTPClient timeClient(ntpUDP);
-// temporary variables for using millis() as timer
+NTP ntp(ntpUDP);
 unsigned long prevTime = 0;
-unsigned long delayTime = 10000;
-
+unsigned long delayTime = 59;
+unsigned long prevNTP = 0;
 void setup() {
   Serial.begin(115200);
-  Serial.println("Please type '1' to connect home wifi or '2' to connect uni wifi");
+  Serial.println("Please type '1' to connect home wifi, '2' to connect hotspot or 3 to connect uni wifi.");
   while (Serial.available() == 0) {
-    modeWiFi = Serial.parseInt();
+
+    modeWiFi = Serial.parseInt(); // while loop repeats this line until int detected in serial monitor
     if (modeWiFi != 0) {
       Serial.println(String(modeWiFi));
       switch (modeWiFi) {
         case 1:
-          connectHomeWiFi();
+          connectWiFi(home_ssid, home_pass);
           break;
         case 2:
+          connectWiFi(hots_ssid, hots_pass);
+          break;
+        case 3:
           connectUCSIWiFi();
           break;
       }
     }
   }
 
-  // Initialize DHT, NTP and ThingSpeak
   dht.begin();
-  timeClient.begin();
+  ntp.ruleSTD("+08", Last, Tue, Jun, 0, 0);
+  ntp.begin();
   ThingSpeak.begin(client);
   if (ThingSpeak.begin(client)) {
     Serial.println("ThingSpeak connection established.");
-    sendData();
+//    sendData();
   }
 }
 
 void loop() {
-  
-  if (millis() - prevTime >=  delayTime) {
+  ntp.update();
+  prevNTP = ntp.seconds();
+//  Serial.println(prevNTP);
+  if (prevNTP == delayTime) {
     sendData();
-    prevTime = millis();
   }
 }
 
 void sendData() {
   float tem = dht.readTemperature();
   float hum = dht.readHumidity();
+  String timeStamp = "At " + String(ntp.formattedTime("%A %T"));
 
   // setField sets the value before writing to ThingSpeak
   ThingSpeak.setField(1, tem);
   ThingSpeak.setField(2, hum);
 
-  Serial.println("Temperature is  " + String( tem ) + "C and Humidity is " + String( hum ));
+  Serial.println(timeStamp + ", temperature is  " + String( tem ) + "C and Humidity is " + String( hum ));
   int x = ThingSpeak.writeFields(channelID, writeAPIKey);
   if (x == 200) {
     Serial.println("Channel update successful.");
@@ -86,11 +91,11 @@ void sendData() {
   
 }
 // WiFi connect functions
-void connectHomeWiFi() {
-  // Connecting to WiFi
-  WiFi.begin(home_ssid, home_pass);
+void connectWiFi(char* the_ssid, char* the_pass) {
+  // connecting to wifi
+  WiFi.begin(the_ssid, the_pass);
   int homeCount = 0;
-  Serial.print("Connecting to network " + String(home_ssid));
+  Serial.print("Connecting to network " + String(the_ssid));
   while ( WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
@@ -106,8 +111,8 @@ void connectHomeWiFi() {
 }
 
 void connectUCSIWiFi() {
-  const char* wpa2e_ssid = "Connect@UCSI";
-  const char* host = "ucsiuniversity.edu.my";
+  const char* wpa2e_ssid = "Connect@UCSI"; // Eduroam wpa2e_ssid
+  const char* host = "ucsiuniversity.edu.my"; //external server domain for HTTP connection after authentification
   int wpa2e_count = 0;
 
   // Code for connecting to UCSI WiFi
@@ -119,8 +124,7 @@ void connectUCSIWiFi() {
   esp_wifi_sta_wpa2_ent_set_identity((uint8_t *)EAP_IDENTITY, strlen(EAP_IDENTITY)); //provide identity
   esp_wifi_sta_wpa2_ent_set_username((uint8_t *)EAP_IDENTITY, strlen(EAP_IDENTITY)); //provide username --> identity and username is same
   esp_wifi_sta_wpa2_ent_set_password((uint8_t *)EAP_PASSWORD, strlen(EAP_PASSWORD)); //provide password
-  esp_wpa2_config_t config = WPA2_CONFIG_INIT_DEFAULT(); //set config settings to default
-  esp_wifi_sta_wpa2_ent_enable(&config); //set config settings to enable function
+  esp_wifi_sta_wpa2_ent_enable(); // Changed 20/7/22 due to unknown issues
   WiFi.begin(wpa2e_ssid); //connect to wifi
 
   while (WiFi.status() != WL_CONNECTED) {
