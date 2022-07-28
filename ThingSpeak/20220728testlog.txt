@@ -1,0 +1,272 @@
+10:15:23.851 -> ..
+10:15:24.367 -> Connected to wifi with IP Address: 
+10:15:24.367 -> 10.181.51.56
+10:15:25.399 -> ThingSpeak connection established.
+10:15:25.399 -> ADC: 695
+10:15:25.446 -> Voltage (V): 0.70
+10:15:27.322 -> Channel update successful.
+10:15:27.369 -> Please wait while we collect the data...
+10:16:22.502 -> ADC: 368
+10:16:22.502 -> Voltage (V): 0.44
+10:16:24.467 -> Channel update successful.
+10:16:24.507 -> Please wait while we collect the data...
+10:17:21.683 -> ADC: 401
+10:17:21.683 -> Voltage (V): 0.47
+10:17:23.558 -> Channel update successful.
+10:17:23.605 -> Please wait while we collect the data...
+10:18:21.796 -> ADC: 430
+10:18:21.796 -> Voltage (V): 0.49
+10:18:23.766 -> Channel update successful.
+10:18:23.812 -> Please wait while we collect the data...
+10:19:21.965 -> ADC: 387
+10:19:21.965 -> Voltage (V): 0.45
+10:19:23.888 -> Channel update successful.
+10:19:23.888 -> Please wait while we collect the data...
+10:20:22.062 -> ADC: 306
+10:20:22.062 -> Voltage (V): 0.39
+10:20:23.986 -> Channel update successful.
+10:20:24.033 -> Please wait while we collect the data...
+10:21:22.206 -> ADC: 333
+10:21:22.206 -> Voltage (V): 0.41
+10:21:24.176 -> Channel update successful.
+10:21:24.223 -> Please wait while we collect the data...
+10:22:22.425 -> ADC: 411
+10:22:22.425 -> Voltage (V): 0.47
+10:22:24.395 -> Channel update successful.
+10:22:24.442 -> Please wait while we collect the data...
+10:23:22.665 -> ADC: 325
+10:23:22.665 -> Voltage (V): 0.40
+10:23:24.634 -> Channel update successful.
+10:23:24.634 -> Please wait while we collect the data...
+10:24:21.784 -> ADC: 337
+10:24:21.784 -> Voltage (V): 0.41
+10:24:23.706 -> Channel update successful.
+10:24:23.706 -> Please wait while we collect the data...
+10:25:21.906 -> ADC: 384
+10:25:21.953 -> Voltage (V): 0.45
+10:25:23.922 -> Channel update successful.
+10:25:23.922 -> Please wait while we collect the data...
+10:26:22.134 -> ADC: 323
+10:26:22.134 -> Voltage (V): 0.40
+10:26:24.102 -> Channel update successful.
+10:26:24.150 -> Please wait while we collect the data...
+10:27:22.301 -> ADC: 413
+10:27:22.348 -> Voltage (V): 0.47
+10:27:24.552 -> Channel update successful.
+10:27:24.552 -> Please wait while we collect the data...
+10:28:21.771 -> ADC: 339
+10:28:21.771 -> Voltage (V): 0.41
+10:28:23.741 -> Channel update successful.
+10:28:23.741 -> Please wait while we collect the data...
+10:29:21.950 -> ADC: 391
+10:29:21.950 -> Voltage (V): 0.46
+10:29:23.946 -> Channel update successful.
+10:29:23.946 -> Please wait while we collect the data...
+10:30:22.149 -> ADC: 321
+10:30:22.149 -> Voltage (V): 0.40
+10:30:24.020 -> Channel update successful.
+10:30:24.068 -> Please wait while we collect the data...
+10:31:22.220 -> ADC: 379
+10:31:22.267 -> Voltage (V): 0.45
+10:31:24.138 -> Channel update successful.
+10:31:24.184 -> Please wait while we collect the data...
+10:32:22.359 -> ADC: 346
+10:32:22.406 -> Voltage (V): 0.42
+10:32:24.376 -> Channel update successful.
+10:32:24.376 -> Please wait while we collect the data...
+10:33:22.540 -> ADC: 389
+10:33:22.583 -> Voltage (V): 0.46
+10:33:24.562 -> Channel update successful.
+10:33:24.597 -> Please wait while we collect the data...
+10:34:21.782 -> ADC: 370
+10:34:21.782 -> Voltage (V): 0.44
+10:34:23.747 -> Channel update successful.
+10:34:23.796 -> Please wait while we collect the data...
+10:35:21.938 -> ADC: 393
+10:35:21.986 -> Voltage (V): 0.46
+10:35:23.872 -> Channel update successful.
+10:35:23.872 -> Please wait while we collect the data...
+10:36:22.072 -> ADC: 314
+10:36:22.119 -> Voltage (V): 0.40
+10:36:24.074 -> Channel update successful.
+10:36:24.121 -> Please wait while we collect the data...
+10:37:22.302 -> ADC: 414
+10:37:22.302 -> Voltage (V): 0.48
+10:37:24.182 -> Channel update successful.
+10:37:24.222 -> Please wait while we collect the data...
+10:38:22.402 -> ADC: 353
+10:38:22.402 -> Voltage (V): 0.43
+10:38:24.617 -> Channel update successful.
+10:38:24.617 -> Please wait while we collect the data...
+10:39:21.834 -> ADC: 352
+10:39:21.834 -> Voltage (V): 0.43
+10:39:23.769 -> Channel update successful.
+10:39:23.816 -> Please wait while we collect the data...
+10:40:21.961 -> ADC: 353
+10:40:22.008 -> Voltage (V): 0.43
+10:40:23.895 -> Channel update successful.
+10:40:23.942 -> Please wait while we collect the data...
+10:41:22.133 -> ADC: 319
+10:41:22.133 -> Voltage (V): 0.40
+10:41:24.398 -> Channel update successful.
+10:41:24.446 -> Please wait while we collect the data...
+10:42:22.620 -> ADC: 354
+10:42:22.620 -> Voltage (V): 0.43
+10:42:24.508 -> Channel update successful.
+10:42:24.555 -> Please wait while we collect the data...
+10:43:21.715 -> ADC: 368
+10:43:21.715 -> Voltage (V): 0.44
+10:43:23.887 -> Channel update successful.
+10:43:23.934 -> Please wait while we collect the data...
+10:44:22.131 -> ADC: 337
+10:44:22.179 -> Voltage (V): 0.41
+10:44:24.112 -> Channel update successful.
+10:44:24.159 -> Please wait while we collect the data...
+10:45:22.303 -> ADC: 304
+10:45:22.303 -> Voltage (V): 0.39
+10:45:24.237 -> Channel update successful.
+10:45:24.237 -> Please wait while we collect the data...
+10:46:22.422 -> ADC: 307
+10:46:22.422 -> Voltage (V): 0.39
+10:46:24.357 -> Channel update successful.
+10:46:24.357 -> Please wait while we collect the data...
+10:47:22.581 -> ADC: 325
+10:47:22.581 -> Voltage (V): 0.40
+10:47:24.561 -> Channel update successful.
+10:47:24.561 -> Please wait while we collect the data...
+10:48:21.750 -> ADC: 427
+10:48:21.750 -> Voltage (V): 0.49
+10:48:23.740 -> Channel update successful.
+10:48:23.740 -> Please wait while we collect the data...
+10:49:21.962 -> ADC: 324
+10:49:21.962 -> Voltage (V): 0.40
+10:49:23.863 -> Channel update successful.
+10:49:23.863 -> Please wait while we collect the data...
+10:50:22.062 -> ADC: 370
+10:50:22.062 -> Voltage (V): 0.44
+10:50:24.074 -> Channel update successful.
+10:50:24.074 -> Please wait while we collect the data...
+10:51:22.249 -> ADC: 404
+10:51:22.249 -> Voltage (V): 0.47
+10:51:24.138 -> Channel update successful.
+10:51:24.185 -> Please wait while we collect the data...
+10:52:22.409 -> ADC: 318
+10:52:22.409 -> Voltage (V): 0.40
+10:52:24.361 -> Channel update successful.
+10:52:24.407 -> Please wait while we collect the data...
+10:53:22.560 -> ADC: 400
+10:53:22.560 -> Voltage (V): 0.46
+10:53:24.578 -> Channel update successful.
+10:53:24.618 -> Please wait while we collect the data...
+10:54:21.799 -> ADC: 384
+10:54:21.799 -> Voltage (V): 0.45
+10:54:23.743 -> Channel update successful.
+10:54:23.783 -> Please wait while we collect the data...
+10:55:21.960 -> ADC: 411
+10:55:21.960 -> Voltage (V): 0.47
+10:55:23.989 -> Channel update successful.
+10:55:23.989 -> Please wait while we collect the data...
+10:56:22.184 -> ADC: 367
+10:56:22.184 -> Voltage (V): 0.44
+10:56:24.069 -> Channel update successful.
+10:56:24.117 -> Please wait while we collect the data...
+10:57:22.324 -> ADC: 389
+10:57:22.324 -> Voltage (V): 0.46
+10:57:24.314 -> Channel update successful.
+10:57:24.314 -> Please wait while we collect the data...
+10:58:22.488 -> ADC: 381
+10:58:22.488 -> Voltage (V): 0.45
+10:58:24.384 -> Channel update successful.
+10:58:24.432 -> Please wait while we collect the data...
+10:59:21.587 -> ADC: 395
+10:59:21.634 -> Voltage (V): 0.46
+10:59:23.590 -> Channel update successful.
+10:59:23.636 -> Please wait while we collect the data...
+11:00:21.769 -> ADC: 288
+11:00:21.817 -> Voltage (V): 0.37
+11:00:23.681 -> Channel update successful.
+11:00:23.729 -> Please wait while we collect the data...
+11:01:21.909 -> ADC: 335
+11:01:21.909 -> Voltage (V): 0.41
+11:01:23.787 -> Channel update successful.
+11:01:23.828 -> Please wait while we collect the data...
+11:02:22.041 -> ADC: 405
+11:02:22.041 -> Voltage (V): 0.47
+11:02:25.039 -> Channel update successful.
+11:02:25.087 -> Please wait while we collect the data...
+11:03:22.262 -> ADC: 419
+11:03:22.262 -> Voltage (V): 0.48
+11:03:24.220 -> Channel update successful.
+11:03:24.260 -> Please wait while we collect the data...
+11:04:22.407 -> ADC: 558
+11:04:22.454 -> Voltage (V): 0.59
+11:04:24.337 -> Channel update successful.
+11:04:24.385 -> Please wait while we collect the data...
+11:05:22.527 -> ADC: 568
+11:05:22.527 -> Voltage (V): 0.60
+11:05:24.457 -> Channel update successful.
+11:05:24.457 -> Please wait while we collect the data...
+11:06:21.686 -> ADC: 151
+11:06:21.686 -> Voltage (V): 0.26
+11:06:23.617 -> Channel update successful.
+11:06:23.664 -> Please wait while we collect the data...
+11:07:21.882 -> ADC: 336
+11:07:21.882 -> Voltage (V): 0.41
+11:07:23.861 -> Channel update successful.
+11:07:23.861 -> Please wait while we collect the data...
+11:08:22.047 -> ADC: 559
+11:08:22.047 -> Voltage (V): 0.59
+11:08:23.954 -> Channel update successful.
+11:08:23.954 -> Please wait while we collect the data...
+11:09:22.164 -> ADC: 315
+11:09:22.164 -> Voltage (V): 0.40
+11:09:24.053 -> Channel update successful.
+11:09:24.101 -> Please wait while we collect the data...
+11:10:22.265 -> ADC: 256
+11:10:22.313 -> Voltage (V): 0.35
+11:10:24.146 -> Channel update successful.
+11:10:24.193 -> Please wait while we collect the data...
+11:11:22.354 -> ADC: 496
+11:11:22.400 -> Voltage (V): 0.54
+11:11:24.284 -> Channel update successful.
+11:11:24.284 -> Please wait while we collect the data...
+11:12:22.489 -> ADC: 501
+11:12:22.489 -> Voltage (V): 0.55
+11:12:24.419 -> Channel update successful.
+11:12:24.419 -> Please wait while we collect the data...
+11:13:21.569 -> ADC: 378
+11:13:21.569 -> Voltage (V): 0.45
+11:13:23.785 -> Channel update successful.
+11:13:23.785 -> Please wait while we collect the data...
+11:14:22.000 -> ADC: 522
+11:14:22.000 -> Voltage (V): 0.56
+11:14:24.178 -> Channel update successful.
+11:14:24.226 -> Please wait while we collect the data...
+11:15:22.477 -> ADC: 251
+11:15:22.477 -> Voltage (V): 0.34
+11:15:24.404 -> Channel update successful.
+11:15:24.404 -> Please wait while we collect the data...
+11:16:21.584 -> ADC: 561
+11:16:21.584 -> Voltage (V): 0.59
+11:16:23.484 -> Channel update successful.
+11:16:23.532 -> Please wait while we collect the data...
+11:17:21.756 -> ADC: 263
+11:17:21.756 -> Voltage (V): 0.35
+11:17:23.782 -> Channel update successful.
+11:17:23.829 -> Please wait while we collect the data...
+11:18:21.985 -> ADC: 581
+11:18:21.985 -> Voltage (V): 0.61
+11:18:23.914 -> Channel update successful.
+11:18:23.914 -> Please wait while we collect the data...
+11:19:22.084 -> ADC: 208
+11:19:22.084 -> Voltage (V): 0.31
+11:19:24.015 -> Channel update successful.
+11:19:24.062 -> Please wait while we collect the data...
+11:20:22.265 -> ADC: 115
+11:20:22.312 -> Voltage (V): 0.23
+11:20:24.244 -> Channel update successful.
+11:20:24.244 -> Please wait while we collect the data...
+11:21:22.457 -> ADC: 224
+11:21:22.457 -> Voltage (V): 0.32
+11:21:24.435 -> Channel update successful.
+11:21:24.482 -> Please wait while we collect the data...
