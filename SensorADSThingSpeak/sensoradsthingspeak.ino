@@ -1,5 +1,4 @@
-// Connect to Uni WiFi only. ESP32
-// For connecting to WiFi
+// Connect to Uni WiFi only
 #include <WiFi.h>
 #include <String.h>
 #include "esp_wpa2.h" //wpa2 library for connections to Enterprise networks
@@ -20,7 +19,7 @@ WiFiClient client;
 WiFiUDP ntpUDP;
 NTP ntp(ntpUDP);
 unsigned long prevTime = 0;
-unsigned long delayTime = 59;
+unsigned long delayTime = 59; // Delay time is 60 seconds, starting from 0 and ending at 59
 unsigned long prevNTP = 0;
 
 // ADC Setup
@@ -51,18 +50,17 @@ void loop() {
   //  Serial.println(prevNTP);
   if (prevNTP - prevTime >=  delayTime) {
     sendData();
-    //    prevTime = prevNTP;
   }
 }
 
 void sendData() {
-  ADCValueRef = AADS.readADC(0);
+  ADCValueRef = ADS.readADC(0); // Collect the sensor readings from the 4 ADS1115 channels
   ADCValueSensor1 = ADS.readADC(1);
   ADCValueSensor2 = ADS.readADC(2);
   ADCValueSensor3 = ADS.readADC(3);
 
-  // Print The Readings
-  Serial.print("Reference Sensor: ");
+  // Print the readings
+  Serial.print("Reference Sensor: "); 
   Serial.println(ADCValueRef);
   Serial.print(" Sensor 1: ");
   Serial.println(ADCValueSensor1);
@@ -72,14 +70,18 @@ void sendData() {
   Serial.println(ADCValueSensor3);
 
   // setField sets the value before writing to ThingSpeak
-  ThingSpeak.setField(1, ADCValueSensor1);
+  ThingSpeak.setField(1, ADCValueRef);
+  ThingSpeak.setField(2, ADCValueSensor1);
+  ThingSpeak.setField(3, ADCValueSensor2);
+  ThingSpeak.setField(4, ADCValueSensor3);
 
+  // Write the data
   int sendDataStatus = ThingSpeak.writeFields(channelID, writeAPIKey);
   if (sendDataStatus == 200) {
     Serial.println("Channel update successful.");
   }
   else {
-    Serial.println("Problem updating channel. HTTP error code " + String(x));
+    Serial.println("Problem updating channel. HTTP error code " + String(sendDataStatus));
   }
   Serial.println("Please wait while we collect the data...");
 
