@@ -1,5 +1,5 @@
 // https://electropeak.com/learn/interfacing-ads1015-12-bit-adc-with-arduino/
-#include "ADS1X15.h"
+#include "ADS1X15.h" // library reference at https://github.com/RobTillaart/ADS1X15
 
 ADS1115 ADS(0x48);
 
