@@ -32,6 +32,7 @@ void setup() {
   connectUCSIWiFi();
 
   ADS.begin();
+  ADS.setGain(2);
   ntp.ruleSTD("+08", Last, Tue, Jun, 0, 0);
   ntp.begin();
   ThingSpeak.begin(client);
