@@ -24,7 +24,7 @@ end
 s1cal = voltage.Var3 / 0.102e-3; % Irradiance measured by sensor 1,
 % calculated using sensitivity value 0.102e-3
 
-% uncomment '%%' if linear_regression.m is stored in a different directory
+% uncomment '%%' if fitBogartz.m is stored in a different directory
 subplot(2,2,1); % Piecewise linear analysis
 hold on;
 %% cd("<Directory Name>") % Enter directory where linear_regression.m is stored
