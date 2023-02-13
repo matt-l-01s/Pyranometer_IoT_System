@@ -20,11 +20,18 @@ However, insert_data.m may miss out on a few data points so some will have to be
 
 After this step, you should have a CSV file with 720 data points.
 
-# Using data_analysis.m
+# Using data_analysis_full.m
 This file takes a CSV file generated above as input and outputs 4 graphs:
 1. Scatter plot of Sensor Voltage against Irradiance with a 2 piece linear regression line.
 2. Solar irradiance against time, from 7:00am to 7:00pm. (12 hours)
 3. Histogram of measurement errors, which is defined as the difference between the reference sensor measurement and sensor 1 measurement.
 4. Measurement errors against time, from 7:00am to 7:00pm. (12 hours)
 
-Graph 1 uses the fitBogartz function from linear_regression.m. Make sure this file is in the same file directory as data_analysis.m or use cd() to change directories to where you saved linear_regression.m
+To use the file, all CSV files should be saved in a folder within the same directory as the file, as shown in this MATLAB file directory.
+![image](https://user-images.githubusercontent.com/79315379/218387563-19da68e1-45e1-4365-8c22-5123b280f39f.png)
+
+The file uses dir() to save the properties of the folder as a struct. From there, the desired CSV file can be read by typing:
+<struct_name>(<number>).name
+which is faster than typing out each CSV file by name.
+  
+Graph 1 uses the fitBogartz function from linear_regression.m. Make sure this file is in the same file directory as data_analysis_full.m or use cd() to change directories to where you saved linear_regression.m
