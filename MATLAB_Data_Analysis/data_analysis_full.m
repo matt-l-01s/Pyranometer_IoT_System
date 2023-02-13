@@ -1,10 +1,9 @@
-% In this code, it is assumed all CSV files for data analysis are saved
-% in a folder called 'Display Data'. If you are using a different directory
-% name, change it accordingly before using this code.
+% In this code, it is assumed all CSV files for data analysis are saved in a folder called 'Display Data'. 
+% If you are using a different directory name, change it accordingly before using this code.
 
 displaydata = dir("Display Data\");
 cd("Display Data\");
-analysisfile = readtable(displaydata(11).name, 'NumHeaderLines',1);
+analysisfile = readtable(displaydata(17).name, 'NumHeaderLines',1);
 cd ..;
 voltage = analysisfile(:,3); % 'Extracts' column 3 as a variable
 irradiance = analysisfile(:,2); % 'Extracts' column 2 as a variable
@@ -25,11 +24,13 @@ end
 s1cal = voltage.Var3 / 0.102e-3; % Irradiance measured by sensor 1,
 % calculated using sensitivity value 0.102e-3
 
+% uncomment '%%' if linear_regression.m is stored in a different directory
 subplot(2,2,1); % Piecewise linear analysis
 hold on;
-cd("MATLAB Files from Dr Rodney\")
+%% cd("<Directory Name>") % Enter directory where linear_regression.m is stored
+% irradiance.Var2 and voltage.Var3 parses all 720 values in each as an individual number
 coefficients = fitBogartz(irradiance.Var2, voltage.Var3, 1);
-cd ..;
+%% cd ..;
 scatter(irradiance.Var2, voltage.Var3, 'r', '.');
 refline(coefficients(1),coefficients(2));
 refline(coefficients(3),coefficients(4));
