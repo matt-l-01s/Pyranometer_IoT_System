@@ -13,9 +13,18 @@ Set 'Compare' to 'None' and hit 'Update'. The following output will be seen.
 3. Select 'Output to Workspace' and 2 variables 'oldData' and 'recentData' will appear in your MATLAB workspace.
 ![image](https://user-images.githubusercontent.com/79315379/218379913-e503d423-eef7-402d-b80a-453ba305ddcf.png)
 
-4. 'oldData' should be a '720x4 timetable' variable type to signify that there are 720 data points sampled every minute. But if there are less than 720 data points, use insert_data.m to insert 'NaN' data points so that the total data points is 720.
+# Adding missing data points
+'oldData' should be a '720x4 timetable' variable type to signify that there are 720 data points sampled every minute. But if there are less than 720 data points, use insert_data.m to insert 'NaN' data points so that the total data points is 720.
 
 However, insert_data.m may miss out on a few data points so some will have to be keyed in manually.
 
-After this step, you should have a CSV file with 720 data points to use for data analysis.
+After this step, you should have a CSV file with 720 data points.
 
+# Using data_analysis.m
+This file takes a CSV file generated above as input and outputs 4 graphs:
+1. Scatter plot of Sensor Voltage against Irradiance with a 2 piece linear regression line.
+2. Solar irradiance against time, from 7:00am to 7:00pm. (12 hours)
+3. Histogram of measurement errors, which is defined as the difference between the reference sensor measurement and sensor 1 measurement.
+4. Measurement errors against time, from 7:00am to 7:00pm. (12 hours)
+
+Graph 1 uses the fitBogartz function from linear_regression.m. Make sure this file is in the same file directory as data_analysis.m or use cd() to change directories to where you saved linear_regression.m
