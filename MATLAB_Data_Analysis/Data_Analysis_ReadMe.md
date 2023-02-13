@@ -34,7 +34,7 @@ The file uses dir() to save the properties of the folder as a struct. From there
 <struct_name>(<number>).name
 which is faster than typing out each CSV file by name.
   
-Graph 1 uses the fitBogartz function from linear_regression.m. Make sure this file is in the same file directory as data_analysis_full.m or use cd() to change directories to where you saved linear_regression.m
+Graph 1 uses the fitBogartz function from fitBogartz.m. Make sure this file is in the same file directory as data_analysis_full.m or use cd() to change directories to where you saved fitBogartz.m
 
 # Using calendar_analysis.m
 This file plots ADC value against time for 2 weeks worth of data. This means that it plots data from 14 CSV files representing 14 different days of data.
