@@ -1,9 +1,12 @@
-% In this code, it is assumed all CSV files for data analysis are saved in a folder called 'Display Data'. 
-% If you are using a different directory name, change it accordingly before using this code.
+% In this code, it is assumed all CSV files for data analysis are saved
+% in a folder called 'Display Data'. If you are using a different directory
+% name, change it accordingly before using this code.
 
 displaydata = dir("Display Data\");
 cd("Display Data\");
 analysisfile = readtable(displaydata(17).name, 'NumHeaderLines',1);
+% Sunny day = February 16
+% Cloudy day = February 11
 cd ..;
 voltage = analysisfile(:,3); % 'Extracts' column 3 as a variable
 irradiance = analysisfile(:,2); % 'Extracts' column 2 as a variable
@@ -49,6 +52,8 @@ legend('Reference Sensor', 'Sensor 1');
 subplot(2,2,3); % Histogram of error between Reference and Sensor 1 measurements
 histogram(irradiance.Var2 - s1cal);
 title('Histogram of Measurement Errors');
+xlabel('Measurement Errors');
+ylabel('Frequency');
 
 subplot(2,2,4); % Graph of error between Reference and Sensor 1 measurements
 plot(analysisfile.Var1, irradiance.Var2 - s1cal);
